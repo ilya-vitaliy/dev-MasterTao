@@ -25,5 +25,26 @@
     "merge-stream": "^2.0.0",
     "sass": "^1.57.1",
     "vinyl-buffer": "^1.0.1"
-  }
+  },
+  "devDependencies": {
+    "prettier": "^3.6.0"
+  },
+  "name": "dev-mastertao",
+  "version": "1.0.0",
+  "description": "![version](https://img.shields.io/badge/version-1.0-red.svg?style=flat-square \"Version Frontend-kit\") [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/sinups/)",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilya-vitaliy/dev-MasterTao.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ilya-vitaliy/dev-MasterTao/issues"
+  },
+  "homepage": "https://github.com/ilya-vitaliy/dev-MasterTao#readme"
 }
