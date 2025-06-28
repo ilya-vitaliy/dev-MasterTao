@@ -5,3 +5,10 @@
 .navbar-nav {
 	max-width: 618px;
 }
+
+.nav-link {
+	color: $color;
+	&:hover {
+		color: $primary-color;
+	}
+}
