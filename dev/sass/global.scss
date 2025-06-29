@@ -38,9 +38,10 @@ html {
 	border-color: $primary-color;
 	padding: 12px 27px;
 
-	&:active, &:focus {
+	&:active,
+	&:focus {
 		background-color: transparent !important;
-		border-color: $primary-color !important;
+		color: $primary-color !important;
 		box-shadow: none !important;
 	}
 
