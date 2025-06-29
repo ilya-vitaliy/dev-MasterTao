@@ -1,7 +1,17 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	font-family: "ProximaNova";
 	background-color: $bg-color;
 	color: $color;
+	line-height: 1.3;
+}
+
+html {
+	font-size: 16px;
 }
 
 .fw-300 {
