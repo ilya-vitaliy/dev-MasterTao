@@ -1,7 +1,17 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	font-family: "ProximaNova";
 	background-color: $bg-color;
 	color: $color;
+	line-height: 1.3;
+}
+
+html {
+	font-size: 16px;
 }
 
 .fw-300 {
@@ -28,7 +38,8 @@ body {
 	border-color: $primary-color;
 	padding: 12px 27px;
 
-	&:active, &:focus {
+	&:active,
+	&:focus {
 		background-color: transparent !important;
 		border-color: $primary-color !important;
 		box-shadow: none !important;

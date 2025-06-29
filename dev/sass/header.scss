@@ -1,3 +1,7 @@
+.logo {
+	max-width: 172px;
+}
+
 .navbar {
 	padding: 37px 0 27px;
 }
@@ -11,4 +15,36 @@
 	&:hover {
 		color: $primary-color;
 	}
+}
+
+.hamburger {
+	padding: 8px 7px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&:focus {
+		box-shadow: none;
+	}
+}
+
+.hamburger-box {
+	width: 27px;
+	height: 25px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after,
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+	background-color: #fff;
+	width: 27px;
+	height: 2px;
+}
+
+.hamburger--collapse .hamburger-inner {
+	top: auto;
+	bottom: 2px;
 }
