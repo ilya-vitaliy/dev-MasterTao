@@ -1,37 +1,75 @@
-@media screen and (max-width: 991px) {
-        .logo {
-            max-width: 126px;
-        }
-    
-        .navbar {
-            padding: 17px 0 15px;
-        }
-    
-        .navbar-collapse {
-            background-color: $bg-color-accent;
-            margin: 0 -11px;
-            padding: 0px 40px 0px;
-            text-align: center;
-            transform: translate(0, 12px);
-        }
-    
-        .navbar-nav {
-            padding: 37px 0 34px;
-            + .btn {
-                margin-bottom: 60px;
-                width: 100%;
-                max-width: 295px;
-                font-size: 16px;
-                padding: 21px 27px;
-            }
-    
-            .nav-link {
-                color: #fff;
-                font-size: 24px;
-                line-height: 222%;
-                &:hover {
-                    color: $primary-color;
-                }
-            }
-        }
-    }
+@media screen and (max-width: 991.99px) {
+	.logo {
+		max-width: 126px;
+	}
+
+	.navbar {
+		padding: 16px 0 15px;
+	}
+
+	.navbar-collapse {
+		background-color: $bg-color-accent;
+		margin: 0 -12px;
+		padding: 0px 40px;
+		text-align: center;
+		transform: translate(0, 12px);
+	}
+
+	.navbar-nav {
+		padding: 37px 0 34px;
+		+ .btn {
+			margin-bottom: 60px;
+			width: 100%;
+			max-width: 295px;
+			font-size: 16px;
+			padding: 21px 27px;
+		}
+	}
+
+	.nav-link {
+		color: #fff;
+		font-size: 24px;
+		line-height: 222%;
+		&:hover {
+			color: $primary-color;
+		}
+	}
+
+	.swiper-banner {
+		.swiper-slide {
+			display: flex;
+			align-items: center;
+			text-align: center;
+			min-height: calc(100vh - 72px);
+
+			&:before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background-color: #04091199;
+				z-index: -1;
+			}
+
+			.container {
+				padding: 0 20px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+	}
+
+	.banner-title {
+		font-size: 32px;
+	}
+
+	.banner-description {
+		font-size: 16px;
+		margin-bottom: 18px;
+	}
+
+	.swiper-button-next,
+	.swiper-button-prev {
+		display: none;
+	}
+}
