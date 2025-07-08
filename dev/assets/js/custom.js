@@ -20,3 +20,14 @@ const swiperBanner = new Swiper(".swiper-banner", {
 		el: ".swiper-pagination",
 	},
 });
+
+const header = document.querySelector("header");
+const banner = document.querySelector(".swiper-banner");
+
+const bannerVariable = banner.getAttribute("style");
+const headerHeight = header.offsetHeight;
+
+console.log(header.offsetHeight);
+console.log(bannerVariable);
+
+banner.setAttribute("style", "--header-height: " + headerHeight + "px");
