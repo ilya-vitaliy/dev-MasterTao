@@ -1,5 +1,6 @@
 @media (min-width: 992px) {
 	.swiper-banner {
+		width: calc(100% - 24px);
 		.swiper-slide {
 			border-radius: 20px;
 		}
