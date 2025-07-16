@@ -1,9 +1,56 @@
 <section class="calculation">
 	<div class="container">
-		<form class="calculation-form"></form>
 		<div class="template-title template-title_case-3">
 			<h2>Получить рассчет стоимости доставки вашего груза</h2>
 		</div>
+		<form class="calculation-form">
+			<div class="form-row">
+				<div class="form-column">
+					<div class="input-box">
+						<label for="product-category">Категория товара:</label>
+						<input id="product-category" type="text" />
+					</div>
+					<div class="input-box">
+						<label for="cargo-weight">Вес груза (кг):</label>
+						<input id="cargo-weight" type="number" />
+					</div>
+				</div>
+				<div class="form-column">
+					<div class="input-box">
+						<label for="cargo-cost">Стоимость груза:</label>
+						<input id="cargo-cost" type="number" />
+					</div>
+					<div class="input-box">
+						<label for="cargo-volume">Объем груза (м3):</label>
+						<input id="cargo-volume" type="number" />
+					</div>
+				</div>
+				<div class="form-column">
+					<div class="input-box">
+						<input id="insurance" type="checkbox" />
+						<label for="insurance">Страховка</label>
+					</div>
+					<div class="input-box">
+						<input id="customs-clearance" type="checkbox" />
+						<label for="customs-clearance">Таможенное оформление</label>
+					</div>
+				</div>
+				<div class="form-column">
+					<div class="input-box">
+						<label for="HS-code">Код ТН ВЭД:</label>
+						<input id="HS-code" type="text" />
+					</div>
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="input-box">
+					<input type="file" />
+				</div>
+			</div>
+			<a href="#" class="btn btn-lg btn-primary"
+				>Следующий шаг <img src="assets/img/icon-arrow-left.svg" alt="arrow"
+			/></a>
+		</form>
 		<!-- <img src="assets/img/calculation-person.png" alt="person" /> -->
 	</div>
 </section>
