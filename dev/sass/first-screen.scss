@@ -1,9 +1,11 @@
+@use "variables" as variables;
+
 .swiper-banner {
 	max-width: 1820px;
 
 	.swiper-slide {
 		min-height: 700px;
-		background-color: $bg-color-accent;
+		background-color: variables.$bg-color-accent;
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
@@ -61,7 +63,7 @@
 		margin-bottom: 0;
 
 		&:hover {
-			color: $secondary-color;
+			color: variables.$secondary-color;
 		}
 	}
 }

@@ -1,6 +1,9 @@
+@use "variables" as variables;
+
 .calculation-form {
 	max-width: 626px;
-	background: $bg-color-accent;
+	height: 597px;
+	background: variables.$bg-color-accent;
 	border-radius: 20px;
 	padding: 50px 50px 60px;
 }
@@ -50,7 +53,7 @@ input[type="checkbox"] {
 	+ label {
 		&:hover {
 			&:before {
-				border-color: $primary-color;
+				border-color: variables.$primary-color;
 			}
 		}
 	}
@@ -59,7 +62,7 @@ input[type="checkbox"] {
 input[type="checkbox"] + label:before {
 	content: "";
 	background-color: #fff;
-	border: 1px solid $bg-color;
+	border: 1px solid variables.$bg-color;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -70,8 +73,5 @@ input[type="checkbox"] + label:before {
 
 input[type="checkbox"]:checked + label:before {
 	content: "";
-	background-image: url("assets/img/icon-checked.svg");
-	background-color: #fff;
-	background-repeat: no-repeat;
-	background-position: center;
+	background: url("assets/img/icon-checked.svg") no-repeat center #fff;
 }

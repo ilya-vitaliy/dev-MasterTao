@@ -1,3 +1,5 @@
+@use "../variables.scss" as variables;
+
 @media screen and (max-width: 991.98px) {
 	.logo {
 		max-width: 126px;
@@ -8,7 +10,7 @@
 	}
 
 	.navbar-collapse {
-		background-color: $bg-color-accent;
+		background-color: variables.$bg-color-accent;
 		margin: 0 -12px;
 		padding: 0px 40px;
 		text-align: center;
@@ -31,7 +33,7 @@
 		font-size: 24px;
 		line-height: 222%;
 		&:hover {
-			color: $primary-color;
+			color: variables.$primary-color;
 		}
 	}
 

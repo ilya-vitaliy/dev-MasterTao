@@ -1,3 +1,5 @@
+@use "variables" as variables;
+
 * {
 	margin: 0;
 	padding: 0;
@@ -5,13 +7,13 @@
 
 body {
 	font-family: "ProximaNova";
-	background-color: $bg-color;
-	color: $color;
+	background-color: variables.$bg-color;
+	color: variables.$color;
 	line-height: 1.3;
 }
 
 section {
-	margin-bottom: $section-margin;
+	margin-bottom: variables.$section-margin;
 }
 
 h1,
@@ -76,21 +78,21 @@ html {
 .btn {
 	font-size: 15px;
 	border-radius: 90px;
-	background-color: $primary-color;
-	color: $color;
-	border-color: $primary-color;
+	background-color: variables.$primary-color;
+	color: variables.$color;
+	border-color: variables.$primary-color;
 	padding: 12px 27px;
 
 	&:active,
 	&:focus {
 		background-color: transparent !important;
-		border-color: $primary-color !important;
+		border-color: variables.$primary-color !important;
 		box-shadow: none !important;
 	}
 
 	&:hover {
 		background-color: transparent;
-		border-color: $primary-color;
+		border-color: variables.$primary-color;
 	}
 
 	&.btn-sm {
@@ -108,7 +110,7 @@ html {
 	&.btn-secondary {
 		background-color: transparent;
 		&:hover {
-			background-color: $primary-color;
+			background-color: variables.$primary-color;
 		}
 	}
 }
