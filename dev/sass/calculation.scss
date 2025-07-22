@@ -4,11 +4,13 @@
 	.template-title {
 		padding-bottom: 52px;
 	}
+	.container {
+		position: relative;
+	}
 }
 
 .calculation-form {
 	max-width: 626px;
-	height: 597px;
 	background: variables.$bg-color-accent;
 	border-radius: 20px;
 	padding: 50px 50px 60px;
@@ -160,4 +162,10 @@ input[type="checkbox"]:checked + label:before {
 
 .file-name {
 	margin-bottom: 13px;
+}
+
+.calculation-img {
+	position: absolute;
+	bottom: -100px;
+	left: 610px;
 }

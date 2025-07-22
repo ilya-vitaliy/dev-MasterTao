@@ -37,6 +37,11 @@
 		}
 	}
 
+	.container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
 	.swiper-banner {
 		.swiper-slide {
 			display: flex;
@@ -57,6 +62,7 @@
 				display: flex;
 				flex-direction: column;
 				align-items: center;
+				text-align: center;
 			}
 		}
 	}
@@ -73,5 +79,13 @@
 	.swiper-button-next,
 	.swiper-button-prev {
 		display: none;
+	}
+
+	.calculation-img {
+		display: none;
+	}
+
+	.input-box_checkbox:first-child {
+		margin-top: 6px;
 	}
 }
