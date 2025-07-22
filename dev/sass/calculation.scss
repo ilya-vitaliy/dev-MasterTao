@@ -101,6 +101,9 @@ input {
 			}
 		}
 	}
+	&::placeholder {
+		color: #cbcbcb;
+	}
 }
 
 input[type="checkbox"] {
@@ -112,9 +115,6 @@ input[type="checkbox"] {
 				border-color: variables.$primary-color;
 			}
 		}
-	}
-	&::placeholder {
-		color: #cbcbcb;
 	}
 }
 
