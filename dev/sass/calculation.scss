@@ -68,6 +68,7 @@ input {
 	border: none;
 	transition: 0.3s;
 	width: 100%;
+	color: variables.$bg-color;
 
 	&:focus-visible {
 		outline: none;
@@ -158,6 +159,48 @@ input[type="checkbox"]:checked + label:before {
 	content: "";
 	background: url(assets/img/icon-checked.svg) no-repeat center;
 	background-color: variables.$color;
+}
+
+.nice-select {
+	color: variables.$bg-color;
+	height: 55px;
+	font-size: 15px;
+	border-radius: 10px;
+	line-height: 52px;
+	.list {
+		margin-bottom: 0;
+	}
+}
+
+.nice-select-dropdown {
+	width: 100%;
+}
+
+.nice-select .option:hover,
+.nice-select .option.focus,
+.nice-select .option.selected.focus {
+	background-color: variables.$secondary-color;
+}
+
+.nice-select:after {
+	border-bottom: none;
+	border-right: none;
+	height: 15px;
+	right: 15px;
+	width: 15px;
+	transform: rotate(0);
+	background: url(assets/img/icon-arrow-bottom.svg) center -2px / 15px no-repeat;
+	margin-top: -5px;
+}
+
+.nice-select.open:after {
+	transform: translateY(-50%) rotate(180deg);
+	margin-top: -9px;
+	right: 20px;
+}
+
+select {
+	display: none;
 }
 
 .file-name {
