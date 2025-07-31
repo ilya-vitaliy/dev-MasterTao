@@ -44,3 +44,6 @@ fileInput.forEach((item) => {
 		fileName.innerHTML = item.files[0].name;
 	});
 });
+
+const buttons = document.querySelectorAll("button");
+console.log(buttons);
