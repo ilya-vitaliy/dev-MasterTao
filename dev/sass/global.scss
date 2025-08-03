@@ -170,6 +170,7 @@ input[type="checkbox"]:checked + label:before {
 	padding: 90px 0 100px;
 
 	.container {
+		max-width: 1364px;
 		padding-left: 100px;
 		padding-right: 100px;
 	}
@@ -183,6 +184,7 @@ input[type="checkbox"]:checked + label:before {
 		margin-left: auto;
 		margin-right: auto;
 		border-radius: 20px;
+		z-index: -1;
 	}
 }
 
