@@ -9,6 +9,10 @@
 		}
 	}
 
+	.nice-select:after {
+		display: none;
+	}
+
 	.form-row {
 		flex-direction: column;
 		margin-bottom: 22px;
