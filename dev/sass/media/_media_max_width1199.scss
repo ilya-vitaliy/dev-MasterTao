@@ -6,4 +6,10 @@
 	.calculation-img {
 		width: 35vw;
 	}
+
+	.bg-accent {
+		&:before {
+			inset: 0 12px;
+		}
+	}
 }
