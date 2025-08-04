@@ -1,5 +1,11 @@
 @use "variables" as variables;
 
+.advantages {
+	.swiper-pagination {
+		position: static;
+	}
+}
+
 .advantage {
 	text-align: center;
 }
@@ -10,10 +16,8 @@
 	border: 1px solid #6c7188;
 	margin: 0 auto 22px;
 	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	position: relative;
+	@include variables.flex-centered;
 }
 
 .advantage__img-box:before {
@@ -28,4 +32,9 @@
 .advantage__title {
 	font-size: 18px;
 	font-weight: 400;
+}
+
+.advantages .swiper-horizontal > .swiper-pagination-bullets,
+.advantages .swiper-pagination-bullets.swiper-pagination-horizontal {
+	top: calc(100% - 59px);
 }
