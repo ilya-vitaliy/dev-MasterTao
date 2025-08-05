@@ -1,0 +1,85 @@
+@use "variables" as variables;
+.card {
+	border-radius: 20px;
+	background-color: variables.$bg-color-accent;
+	color: variables.$color;
+	border: none;
+	width: 360px;
+
+	&__img-box {
+		border-radius: 20px 20px 0 0;
+		overflow: hidden;
+	}
+
+	&-body {
+		padding: 27px 20px;
+	}
+
+	&-title {
+		font-size: 22px;
+		margin-bottom: 12px;
+	}
+
+	&__options-list {
+		list-style: none;
+		display: flex;
+		justify-content: center;
+		gap: 34px;
+		padding: 0;
+		margin-bottom: 8px;
+	}
+
+	&__options-item {
+		@include variables.flex-centered;
+		gap: 8px;
+	}
+
+	.card__price {
+		margin-bottom: 22px;
+		font-size: 22px;
+
+		span {
+			&:first-child {
+				color: #a3a3a3;
+			}
+		}
+
+		strong {
+			font-size: 45px;
+			line-height: 125%;
+		}
+	}
+
+	&__btn-row {
+		gap: 14px;
+		display: flex;
+
+		.btn {
+			width: 50%;
+		}
+	}
+
+	&.card_services {
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(
+				0deg,
+				rgba(4, 5, 17, 0.91) 0%,
+				rgba(88, 88, 88, 0) 100%
+			);
+			border-radius: 20px;
+		}
+
+		.card-body {
+			text-align: left;
+			display: flex;
+			flex-direction: column;
+			justify-content: end;
+			z-index: 1;
+		}
+	}
+}
