@@ -1,0 +1,7 @@
+@media screen and (max-height: 375.99px) {
+  .swiper-banner .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-banner .swiper-pagination-bullets.swiper-pagination-horizontal {
+    top: calc(100% - 34px);
+    margin: 0 auto;
+  }
+}

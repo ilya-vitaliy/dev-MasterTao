@@ -1,134 +1,134 @@
-@use "../variables.scss" as variables;
+@use '../variables.scss' as variables;
 
 @media screen and (max-width: 991.98px) {
-	section {
-		margin-bottom: variables.$section-margin-mobile;
-	}
+  section {
+    margin-bottom: variables.$section-margin-mobile;
+  }
 
-	h2 {
-		font-size: 24px;
-	}
+  h2 {
+    font-size: 24px;
+  }
 
-	.logo {
-		max-width: 126px;
-	}
+  .logo {
+    max-width: 126px;
+  }
 
-	.navbar {
-		padding: 16px 0 15px;
-	}
+  .navbar {
+    padding: 16px 0 15px;
+  }
 
-	.navbar-collapse {
-		background-color: variables.$bg-color-accent;
-		margin: 0 -12px;
-		text-align: center;
-		transform: translate(0, 12px);
-	}
+  .navbar-collapse {
+    background-color: variables.$bg-color-accent;
+    margin: 0 -12px;
+    text-align: center;
+    transform: translate(0, 12px);
+  }
 
-	.navbar-nav {
-		padding: 37px 0 34px;
-		+ .btn {
-			margin-bottom: 60px;
-			width: 100%;
-			max-width: 295px;
-			font-size: 16px;
-			padding: 21px 27px;
-		}
-	}
+  .navbar-nav {
+    padding: 37px 0 34px;
+    + .btn {
+      margin-bottom: 60px;
+      width: 100%;
+      max-width: 295px;
+      font-size: 16px;
+      padding: 21px 27px;
+    }
+  }
 
-	.nav-link {
-		color: #fff;
-		font-size: 24px;
-		line-height: 222%;
-		&:hover {
-			color: variables.$primary-color;
-		}
-	}
+  .nav-link {
+    color: #fff;
+    font-size: 24px;
+    line-height: 222%;
+    &:hover {
+      color: variables.$primary-color;
+    }
+  }
 
-	.bg-accent {
-		padding: 55px 0 60px;
+  .bg-accent {
+    padding: 55px 0 60px;
 
-		&:before {
-			border-radius: 0;
-			inset: 0;
-		}
-	}
+    &:before {
+      border-radius: 0;
+      inset: 0;
+    }
+  }
 
-	.template-title {
-		&.template-title_case-3 {
-			text-align: center;
-			max-width: 100%;
-			padding-bottom: 70px;
+  .template-title {
+    &.template-title_case-3 {
+      text-align: center;
+      max-width: 100%;
+      padding-bottom: 70px;
 
-			h2 {
-				&::after {
-					@include variables.title-line;
-					margin: 0;
-				}
-			}
-		}
-	}
+      h2 {
+        &::after {
+          @include variables.title-line;
+          margin: 0;
+        }
+      }
+    }
+  }
 
-	.bg-accent {
-		.container {
-			padding-left: 20px;
-			padding-right: 20px;
-		}
-	}
+  .bg-accent {
+    .container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
 
-	.container {
-		padding-left: 20px;
-		padding-right: 20px;
-	}
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
-	.swiper-banner {
-		.swiper-slide {
-			display: flex;
-			align-items: center;
-			text-align: center;
-			min-height: calc(100vh - var(--header-height));
+  .swiper-banner {
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      min-height: calc(100vh - var(--header-height));
 
-			&:before {
-				content: "";
-				position: absolute;
-				inset: 0;
-				background-color: #04091199;
-				z-index: -1;
-			}
+      &:before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: #04091199;
+        z-index: -1;
+      }
 
-			.container {
-				padding: 0 20px;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				text-align: center;
-			}
-		}
-	}
+      .container {
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
 
-	.banner-title {
-		font-size: 36px;
-	}
+  .banner-title {
+    font-size: 36px;
+  }
 
-	.banner-description {
-		font-size: 16px;
-		margin-bottom: 18px;
-	}
+  .banner-description {
+    font-size: 16px;
+    margin-bottom: 18px;
+  }
 
-	.swiper-button-next,
-	.swiper-button-prev {
-		display: none;
-	}
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
 
-	.calculation-img {
-		display: none;
-	}
+  .calculation-img {
+    display: none;
+  }
 
-	.input-box_checkbox:first-child {
-		margin-top: 6px;
-	}
+  .input-box_checkbox:first-child {
+    margin-top: 6px;
+  }
 
-	.advantage__title {
-		max-width: 218px;
-		margin: 0 auto 40px;
-	}
+  .advantage__title {
+    max-width: 218px;
+    margin: 0 auto 40px;
+  }
 }

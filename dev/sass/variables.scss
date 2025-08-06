@@ -1,6 +1,6 @@
 ///fonts///
-$font-primary: "Open Sans";
-$font-secondary: "monospace";
+$font-primary: 'Open Sans';
+$font-secondary: 'monospace';
 $font-size: 16px;
 
 ///colors///
@@ -14,18 +14,18 @@ $section-margin: 100px;
 $section-margin-mobile: 60px;
 
 @mixin title-line {
-	content: "";
-	position: absolute;
-	width: 85px;
-	height: 2px;
-	background-color: $primary-color;
-	bottom: 54px;
-	left: 50%;
-	transform: translate(-50%);
+  content: '';
+  position: absolute;
+  width: 85px;
+  height: 2px;
+  background-color: $primary-color;
+  bottom: 54px;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 @mixin flex-centered {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

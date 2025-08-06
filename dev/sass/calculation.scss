@@ -1,24 +1,24 @@
-@use "variables" as variables;
+@use 'variables' as variables;
 
 .calculation {
-	.template-title {
-		padding-bottom: 52px;
-	}
-	.container {
-		position: relative;
-	}
+  .template-title {
+    padding-bottom: 52px;
+  }
+  .container {
+    position: relative;
+  }
 }
 
 .calculation-form {
-	max-width: 626px;
-	background: variables.$bg-color-accent;
-	border-radius: 20px;
-	padding: 50px 50px 60px;
-	font-size: 15px;
+  max-width: 626px;
+  background: variables.$bg-color-accent;
+  border-radius: 20px;
+  padding: 50px 50px 60px;
+  font-size: 15px;
 }
 
 .calculation-img {
-	position: absolute;
-	bottom: -100px;
-	left: 610px;
+  position: absolute;
+  bottom: -100px;
+  left: 610px;
 }

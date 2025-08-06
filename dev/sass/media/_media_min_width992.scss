@@ -1,17 +1,17 @@
 @media (min-width: 992px) {
-	.swiper-banner {
-		width: calc(100% - 24px);
+  .swiper-banner {
+    width: calc(100% - 24px);
 
-		.swiper-slide {
-			border-radius: 20px;
-		}
-	}
+    .swiper-slide {
+      border-radius: 20px;
+    }
+  }
 
-	.advantages {
-		.swiper-wrapper {
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr 1fr;
-			gap: 48px 24px;
-		}
-	}
+  .advantages {
+    .swiper-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 48px 24px;
+    }
+  }
 }

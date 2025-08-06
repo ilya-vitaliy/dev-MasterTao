@@ -1,86 +1,85 @@
-@use "variables" as variables;
+@use 'variables' as variables;
 
 .swiper-banner {
-	max-width: 1820px;
+  max-width: 1820px;
 
-	.swiper-slide {
-		min-height: 700px;
-		background-color: variables.$bg-color-accent;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
+  .swiper-slide {
+    min-height: 700px;
+    background-color: variables.$bg-color-accent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
-		.container {
-			padding-top: 163px;
-			padding-bottom: 73px;
-		}
-	}
+    .container {
+      padding-top: 163px;
+      padding-bottom: 73px;
+    }
+  }
 
-	.swiper-banner-arrow {
-		--padding: 20px;
-		height: 0px;
-		position: absolute;
-		top: calc(50% - 23px);
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: 100%;
-		max-width: calc(1503px + var(--padding) * 2);
-		padding: 0 var(--padding);
-		z-index: 1;
-		display: flex;
-		justify-content: space-between;
-	}
+  .swiper-banner-arrow {
+    --padding: 20px;
+    height: 0px;
+    position: absolute;
+    top: calc(50% - 23px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: calc(1503px + var(--padding) * 2);
+    padding: 0 var(--padding);
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+  }
 
-	.swiper-button-next,
-	.swiper-button-prev {
-		color: #fff;
-		position: static;
-		margin-bottom: 0;
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #fff;
+    position: static;
+    margin-bottom: 0;
 
-		&:hover {
-			color: variables.$secondary-color;
-		}
-	}
+    &:hover {
+      color: variables.$secondary-color;
+    }
+  }
 
-	.swiper-horizontal > .swiper-pagination-bullets,
-	.swiper-pagination-bullets.swiper-pagination-horizontal {
-		top: calc(100% - 59px);
-		margin: 0 auto;
-	}
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    top: calc(100% - 59px);
+    margin: 0 auto;
+  }
 }
 
 .banner-title {
-	font-size: 56px;
-	font-weight: 700;
-	text-transform: uppercase;
-	margin-bottom: 24px;
-	max-width: 515px;
-	line-height: 1.26;
+  font-size: 56px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  max-width: 515px;
+  line-height: 1.26;
 }
 .banner-description {
-	max-width: 320px;
-	font-size: 20px;
-	font-weight: 300;
-	margin-bottom: 37px;
-	line-height: 1.36;
+  max-width: 320px;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 37px;
+  line-height: 1.36;
 }
 
 .swiper-pagination-bullet {
-	width: 8px;
-	height: 8px;
-	border: 2px solid #fff;
-	background-color: transparent;
-	opacity: 1;
-	cursor: pointer;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #fff;
+  background-color: transparent;
+  opacity: 1;
+  cursor: pointer;
 
-	&-active {
-		background-color: #fff;
-	}
+  &-active {
+    background-color: #fff;
+  }
 }
 
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets
-	.swiper-pagination-bullet {
-	margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 13px);
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 13px);
 }
