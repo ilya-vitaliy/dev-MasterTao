@@ -18,6 +18,7 @@
   &-title {
     font-size: 22px;
     margin-bottom: 12px;
+    text-align: center;
   }
 
   &__options-list {
@@ -37,6 +38,7 @@
   .card__price {
     margin-bottom: 22px;
     font-size: 22px;
+    text-align: center;
 
     span {
       &:first-child {

@@ -1,2 +1,10 @@
 @media screen and (max-width: 575.99px) {
+  .about__img-box {
+    max-width: 300px;
+  }
+
+  .about-text__description {
+    font-size: 16px;
+    line-height: 150%;
+  }
 }

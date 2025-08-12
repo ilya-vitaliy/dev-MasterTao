@@ -17,29 +17,7 @@
   }
 
   .swiper-banner-arrow {
-    --padding: 20px;
-    height: 0px;
-    position: absolute;
-    top: calc(50% - 23px);
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    max-width: calc(1503px + var(--padding) * 2);
-    padding: 0 var(--padding);
-    z-index: 1;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    color: #fff;
-    position: static;
-    margin-bottom: 0;
-
-    &:hover {
-      color: variables.$secondary-color;
-    }
+    @include variables.swiper-arrow-container;
   }
 
   .swiper-horizontal > .swiper-pagination-bullets,
@@ -63,23 +41,4 @@
   font-weight: 300;
   margin-bottom: 37px;
   line-height: 1.36;
-}
-
-.swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
-  border: 2px solid #fff;
-  background-color: transparent;
-  opacity: 1;
-  cursor: pointer;
-
-  &-active {
-    background-color: #fff;
-  }
-}
-
-.swiper-horizontal > .swiper-pagination-bullets,
-.swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 13px);
 }

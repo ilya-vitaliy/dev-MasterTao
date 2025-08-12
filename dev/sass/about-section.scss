@@ -1,0 +1,47 @@
+@use 'variables' as variables;
+
+.about-section {
+  .container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 35px;
+  }
+}
+
+.template-title_case-2 {
+  text-align: left;
+  padding-top: 65px;
+
+  h2::after {
+    background-color: variables.$secondary-color;
+  }
+}
+
+.about-text__description {
+  max-width: 555px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 170%;
+  color: #fff;
+  margin: 0 auto;
+
+  p {
+    margin-bottom: 27px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.about__img-box {
+  max-width: 550px;
+  height: auto;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
