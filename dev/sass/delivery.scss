@@ -4,7 +4,7 @@
   background-color: variables.$bg-color-accent;
   color: variables.$color;
   border: none;
-  width: 360px;
+  max-width: 360px;
 
   &__img-box {
     border-radius: 20px 20px 0 0;
