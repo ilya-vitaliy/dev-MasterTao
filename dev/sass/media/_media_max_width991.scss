@@ -119,6 +119,11 @@
     display: none;
   }
 
+  .calculation-form {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .calculation-img {
     display: none;
   }
@@ -170,6 +175,31 @@
 
   .faq__row {
     flex-direction: column;
+  }
+
+  .about-faq .accordion .accordion-item .accordion-button {
+    padding: 16px 21px 12px 22px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 125%;
+    gap: 20px;
+  }
+
+  .about-faq .accordion .accordion-body {
+    padding: 2px 21px 0px;
+  }
+
+  .about-faq .list-group-horizontal > .list-group-item.active,
+  .about-faq dl,
+  .about-faq ol,
+  .about-faq p,
+  .about-faq ul {
+    margin-top: 0;
+
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 145%;
+    color: #ffffff;
   }
 
   .faq-form {
