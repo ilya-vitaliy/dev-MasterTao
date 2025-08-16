@@ -65,7 +65,8 @@ label {
   letter-spacing: 0.1px;
 }
 
-input {
+input,
+textarea {
   background-color: variables.$color;
   font-size: 15px;
   border-radius: 10px;

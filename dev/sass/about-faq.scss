@@ -1,0 +1,103 @@
+@use 'variables' as variables;
+
+.faq__row {
+  display: flex;
+  gap: 34px;
+}
+
+.faq-form {
+  background-color: variables.$bg-color-accent;
+  border-radius: 20px;
+  padding: 38px 40px;
+  min-width: 390px;
+
+  .btn-lg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    width: 310px;
+    height: 68px;
+    padding: 0 20px;
+  }
+
+  .btn-arrow {
+    flex-shrink: 0;
+  }
+}
+.input-box {
+  margin-bottom: 14px;
+}
+.faq-form__title {
+  font-size: 24px;
+  line-height: 126%;
+  margin-bottom: 12px;
+}
+
+.faq-form__subtitle {
+  font-size: 17px;
+  margin-bottom: 23px;
+  font-weight: 300;
+  line-height: 126%;
+}
+
+textarea {
+  min-height: 55px;
+  height: 70px;
+  max-height: 160px;
+  margin-bottom: 12px;
+}
+
+.about-faq {
+  .accordion {
+    width: 100%;
+
+    .accordion-item {
+      background: transparent;
+      border-radius: 10px;
+      border: 1px solid variables.$border-color;
+      margin-bottom: 16px;
+
+      .accordion-button {
+        border-radius: 10px;
+        background-color: transparent;
+        color: #ffffff;
+        font-size: 18px;
+        line-height: 125%;
+        color: #fff;
+        box-shadow: none;
+        font-weight: 800;
+        padding: 22px 19px 22px 34px;
+
+        &:after {
+          width: 26px;
+          height: 26px;
+          background-size: contain;
+          background-image: url("data:image/svg+xml,%3Csvg width='27' height='27' viewBox='0 0 27 27' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.421875 13.4995C0.421875 6.2749 6.27539 0.421387 13.5 0.421387C20.7246 0.421387 26.5781 6.2749 26.5781 13.4995C26.5781 20.7241 20.7246 26.5776 13.5 26.5776C6.27539 26.5776 0.421875 20.7241 0.421875 13.4995ZM13.5 24.8901C19.7596 24.8901 24.8906 19.8224 24.8906 13.4995C24.8906 7.23994 19.8229 2.10889 13.5 2.10889C7.24043 2.10889 2.10938 7.17666 2.10938 13.4995C2.10938 19.7591 7.17715 24.8901 13.5 24.8901ZM14.1592 20.0122L20.2289 13.9478C20.4768 13.6999 20.4768 13.2991 20.2289 13.0513L14.1592 6.98682C13.9113 6.73897 13.5105 6.73897 13.2627 6.98682L12.8988 7.35068C12.651 7.59854 12.651 8.00986 12.9094 8.25244L17.4182 12.603H7.38281C7.03477 12.603 6.75 12.8878 6.75 13.2358V13.7632C6.75 14.1112 7.03477 14.396 7.38281 14.396H17.4182L12.9041 18.7466C12.651 18.9944 12.6457 19.4005 12.8936 19.6483L13.2574 20.0122C13.5105 20.2601 13.9113 20.2601 14.1592 20.0122Z' fill='%23ffffff' /%3E%3C/svg%3E");
+        }
+
+        &:not(.collapsed)::after {
+          background-image: url("data:image/svg+xml,%3Csvg width='27' height='27' viewBox='0 0 27 27' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.421875 13.4995C0.421875 6.2749 6.27539 0.421387 13.5 0.421387C20.7246 0.421387 26.5781 6.2749 26.5781 13.4995C26.5781 20.7241 20.7246 26.5776 13.5 26.5776C6.27539 26.5776 0.421875 20.7241 0.421875 13.4995ZM13.5 24.8901C19.7596 24.8901 24.8906 19.8224 24.8906 13.4995C24.8906 7.23994 19.8229 2.10889 13.5 2.10889C7.24043 2.10889 2.10938 7.17666 2.10938 13.4995C2.10938 19.7591 7.17715 24.8901 13.5 24.8901ZM14.1592 20.0122L20.2289 13.9478C20.4768 13.6999 20.4768 13.2991 20.2289 13.0513L14.1592 6.98682C13.9113 6.73897 13.5105 6.73897 13.2627 6.98682L12.8988 7.35068C12.651 7.59854 12.651 8.00986 12.9094 8.25244L17.4182 12.603H7.38281C7.03477 12.603 6.75 12.8878 6.75 13.2358V13.7632C6.75 14.1112 7.03477 14.396 7.38281 14.396H17.4182L12.9041 18.7466C12.651 18.9944 12.6457 19.4005 12.8936 19.6483L13.2574 20.0122C13.5105 20.2601 13.9113 20.2601 14.1592 20.0122Z' fill='%23E58D35' /%3E%3C/svg%3E");
+          transform: rotate(-90deg);
+        }
+      }
+    }
+
+    .accordion-body {
+      padding: 2px 34px 28px;
+      color: #ffffff;
+    }
+  }
+
+  .list-group-horizontal > .list-group-item.active,
+  dl,
+  ol,
+  p,
+  ul {
+    margin-top: 0;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 145%;
+    color: #ffffff;
+  }
+}

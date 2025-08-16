@@ -143,6 +143,7 @@
       transform: translateX(-50%);
     }
   }
+
   .delivery {
     .card__btn-row .btn {
       width: auto;
@@ -165,5 +166,35 @@
     .about-text__description {
       margin: 0 auto;
     }
+  }
+
+  .faq__row {
+    flex-direction: column;
+  }
+
+  .faq-form {
+    min-width: 335px;
+    padding: 38px 20px;
+  }
+
+  .faq-form .btn-lg {
+    max-width: 100%;
+    height: 68px;
+    padding: 0 28px;
+    gap: 0px;
+
+    .btn-text {
+      line-height: 146%;
+    }
+    .btn-arrow {
+      flex-shrink: 0;
+      margin-left: auto;
+    }
+  }
+
+  .faq-form__title,
+  .faq-form__subtitle {
+    text-align: center;
+    padding: 0px 12px 0px 12px;
   }
 }
