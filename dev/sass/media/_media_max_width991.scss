@@ -227,4 +227,39 @@
     text-align: center;
     padding: 0px 12px 0px 12px;
   }
+  .cooperation {
+    .container {
+      .template-title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 125%;
+        text-transform: uppercase;
+        text-align: center;
+        h3 {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+          text-transform: none;
+        }
+      }
+    }
+  }
+
+  .cooperation__content {
+    flex-direction: column;
+    gap: 36px;
+    margin-top: 0px;
+  }
+
+  .cooperation__content-item {
+    width: 100%;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: justify;
+  }
+
+  .order-mobile-negative {
+    order: -1;
+  }
 }

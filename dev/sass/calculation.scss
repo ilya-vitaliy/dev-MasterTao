@@ -5,6 +5,10 @@
     padding-bottom: 52px;
   }
 
+  .template-title.template-title_case-3 h2::after {
+    background-color: variables.$secondary-color;
+  }
+
   .container {
     position: relative;
   }

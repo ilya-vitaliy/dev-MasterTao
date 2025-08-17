@@ -1,4 +1,11 @@
 @use 'variables' as variables;
+
+.delivery {
+  .template-title h2::after {
+    background-color: variables.$secondary-color;
+  }
+}
+
 .card {
   border-radius: 20px;
   background-color: variables.$bg-color-accent;
