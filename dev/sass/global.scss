@@ -221,7 +221,7 @@ html {
   &:focus {
     background-color: transparent !important;
     border-color: variables.$primary-color !important;
-    box-shadow: none !important;
+    // box-shadow: none !important;
   }
 
   &:hover {

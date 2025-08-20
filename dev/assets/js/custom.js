@@ -42,7 +42,6 @@ fileInput.forEach((item) => {
 });
 
 const buttons = document.querySelectorAll('button');
-console.log(buttons);
 
 const advantagesSlideLength = document.querySelectorAll('.advantages .swiper-slide').length;
 
