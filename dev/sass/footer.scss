@@ -81,6 +81,9 @@ footer {
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: #85899c;
+    &:hover {
+      color: variables.$primary-color;
+    }
   }
 }
 
