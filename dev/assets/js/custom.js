@@ -109,3 +109,12 @@ document.querySelectorAll('.template-carousel').forEach((carouselEl, index) => {
     },
   });
 });
+
+document.querySelectorAll('.accordion-item').forEach(item => {
+  item.addEventListener('show.bs.collapse', () => {
+    item.classList.add('active');
+  });
+  item.addEventListener('hide.bs.collapse', () => {
+    item.classList.remove('active');
+  });
+});
