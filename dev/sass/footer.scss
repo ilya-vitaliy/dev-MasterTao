@@ -25,7 +25,6 @@ footer {
   font-size: 14px;
   line-height: 162%;
   color: #fff;
-  padding-right: 107px;
   white-space: nowrap;
 }
 
@@ -38,6 +37,7 @@ footer {
 
 .footer-container {
   display: flex;
+  gap: 90px;
 }
 
 .footer {
