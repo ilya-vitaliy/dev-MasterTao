@@ -5,9 +5,22 @@ const btnBurger = document.querySelector('.hamburger');
 btnBurger.addEventListener('click', () => btnBurger.classList.toggle('is-active'));
 
 const swiperBanner = new Swiper('.swiper-banner', {
-  direction: 'horizontal',
   loop: true,
-  spaceBetween: 24,
+  speed: 1600,
+
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true,
+  },
+
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
+
+  resistanceRatio: 0.8,
+  freeMode: false,
 
   navigation: {
     nextEl: '.swiper-button-next',
@@ -15,8 +28,8 @@ const swiperBanner = new Swiper('.swiper-banner', {
   },
 
   pagination: {
-    clickable: true,
     el: '.swiper-pagination',
+    clickable: true,
   },
 });
 
@@ -110,7 +123,7 @@ document.querySelectorAll('.template-carousel').forEach((carouselEl, index) => {
   });
 });
 
-document.querySelectorAll('.accordion-item').forEach(item => {
+document.querySelectorAll('.accordion-item').forEach((item) => {
   item.addEventListener('show.bs.collapse', () => {
     item.classList.add('active');
   });
