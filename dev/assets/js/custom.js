@@ -4,32 +4,44 @@ selects.forEach((item) => NiceSelect.bind(item));
 const btnBurger = document.querySelector('.hamburger');
 btnBurger.addEventListener('click', () => btnBurger.classList.toggle('is-active'));
 
-const swiperBanner = new Swiper('.swiper-banner', {
+const swiper = new Swiper('.swiper', {
   loop: true,
-  speed: 1600,
+  speed: 400,
+  autoplay: true,
+  touchRatio: 1,
+  simulateTouch: true,
 
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
   },
-
-  autoplay: {
-    delay: 3500,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: true,
-  },
-
-  resistanceRatio: 0.8,
-  freeMode: false,
 
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
 
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      speed: 400,
+      autoplay: false,
+    },
+
+    768: {
+      slidesPerView: 1,
+      speed: 450,
+      autoplay: false,
+    },
+
+    1024: {
+      slidesPerView: 1,
+      speed: 1200,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    },
   },
 });
 
