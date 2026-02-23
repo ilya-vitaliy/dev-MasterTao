@@ -56,7 +56,7 @@ gulp.task('html', function () {
 
 gulp.task('img', function () {
   return gulp
-    .src([dirs.source + '/assets/img/*.{gif,png,jpg,jpeg,svg}'], { since: gulp.lastRun('img') })
+    .src(dirs.source + '/assets/img/**/*.{gif,png,jpg,jpeg,svg,webp}', { since: gulp.lastRun('img') })
     .pipe(plumber({ errorHandler: onError }))
     .pipe(newer(dirs.build + '/assets/img'))
     .pipe(gulp.dest(dirs.build + '/assets/img'));
@@ -64,7 +64,7 @@ gulp.task('img', function () {
 
 gulp.task('images', function () {
   return gulp
-    .src([dirs.source + '/assets/images/*.{gif,png,jpg,jpeg,svg}'], { since: gulp.lastRun('img') })
+    .src(dirs.source + '/assets/images/**/*.{gif,png,jpg,jpeg,svg,webp}', { since: gulp.lastRun('images') })
     .pipe(plumber({ errorHandler: onError }))
     .pipe(newer(dirs.build + '/assets/images'))
     .pipe(gulp.dest(dirs.build + '/assets/images'));
@@ -72,82 +72,35 @@ gulp.task('images', function () {
 
 gulp.task('imguploads', function () {
   return gulp
-    .src([dirs.source + '/uploads/*.{gif,png,jpg,jpeg,svg}', dirs.source + '/uploads/**/*.{gif,png,jpg,jpeg,svg}'], { since: gulp.lastRun('img') })
+    .src(dirs.source + '/uploads/**/*.{gif,png,jpg,jpeg,svg,webp}', { since: gulp.lastRun('imguploads') })
     .pipe(plumber({ errorHandler: onError }))
     .pipe(newer(dirs.build + '/uploads'))
     .pipe(gulp.dest(dirs.build + '/uploads'));
 });
 
-gulp.task('svgstore', function (callback) {
-  var spritePath = dirs.source + '/assets/img/svg-sprite';
-  if (fileExist(spritePath) !== false) {
-    return gulp
-      .src(spritePath + '/*.svg')
-
-      .pipe(
-        svgmin(function (file) {
-          return {
-            plugins: [
-              {
-                cleanupIDs: {
-                  minify: true,
-                },
-              },
-            ],
-          };
-        }),
-      )
-      .pipe(svgstore({ inlineSvg: true }))
-      .pipe(
-        cheerio({
-          run: function ($) {
-            $('[fill]').removeAttr('fill');
+gulp.task('svgstore', function () {
+  return gulp
+    .src([dirs.source + '/assets/img/svg-sprite/*.svg', dirs.source + '/assets/images/svg-sprite/*.svg'], { allowEmpty: true })
+    .pipe(
+      svgmin({
+        plugins: [
+          {
+            cleanupIDs: { minify: true },
           },
-          parserOptions: { xmlMode: true },
-        }),
-      )
-      .pipe(rename('sprite-svg.svg'))
-      .pipe(gulp.dest(dirs.source + '/assets/img'));
-  } else {
-    console.log('Нет файлов для сборки SVG-спрайта');
-    callback();
-  }
-});
-
-gulp.task('svgstore', function (callback) {
-  var spritePath = dirs.source + '/assets/images/svg-sprite';
-  if (fileExist(spritePath) !== false) {
-    return gulp
-      .src(spritePath + '/*.svg')
-
-      .pipe(
-        svgmin(function (file) {
-          return {
-            plugins: [
-              {
-                cleanupIDs: {
-                  minify: true,
-                },
-              },
-            ],
-          };
-        }),
-      )
-      .pipe(svgstore({ inlineSvg: true }))
-      .pipe(
-        cheerio({
-          run: function ($) {
-            $('[fill]').removeAttr('fill');
-          },
-          parserOptions: { xmlMode: true },
-        }),
-      )
-      .pipe(rename('sprite-svg.svg'))
-      .pipe(gulp.dest(dirs.source + '/assets/images'));
-  } else {
-    console.log('Нет файлов для сборки SVG-спрайта');
-    callback();
-  }
+        ],
+      }),
+    )
+    .pipe(svgstore({ inlineSvg: true }))
+    .pipe(
+      cheerio({
+        run: function ($) {
+          $('[fill]').removeAttr('fill');
+        },
+        parserOptions: { xmlMode: true },
+      }),
+    )
+    .pipe(rename('sprite-svg.svg'))
+    .pipe(gulp.dest(dirs.source + '/assets/img'));
 });
 
 gulp.task('clean', function () {
@@ -194,13 +147,12 @@ gulp.task(
     gulp.watch([dirs.source + '**/**/**/**/*.php', dirs.source + '/modules/*.php'], gulp.series('php', reloader));
     gulp.watch([dirs.source + '/sass/**/*.scss', dirs.source + '/sass/*.scss', dirs.source + '/*.scss'], gulp.series('sass', reloader));
     gulp.watch(dirs.source + '/assets/img/svg-sprite/*.svg', gulp.series('svgstore', 'html', reloader));
-    gulp.watch(dirs.source + '/assets/img/*.{gif,png,jpg,jpeg,svg}', gulp.series('img', reloader));
+    gulp.watch(dirs.source + '/assets/img/**/*.{gif,png,jpg,jpeg,svg,webp}', gulp.series('img', reloader));
 
     gulp.watch(dirs.source + '/assets/images/svg-sprite/*.svg', gulp.series('svgstore', 'html', reloader));
-    gulp.watch(dirs.source + '/assets/images/*.{gif,png,jpg,jpeg,svg}', gulp.series('img', reloader));
+    gulp.watch(dirs.source + '/assets/images/**/*.{gif,png,jpg,jpeg,svg,webp}', gulp.series('images', reloader));
 
-    gulp.watch([dirs.source + '/uploads/**/*.{gif,png,jpg,jpeg,svg}', dirs.source + '/uploads/*.{gif,png,jpg,jpeg,svg}'], gulp.series('imguploads', reloader));
-    gulp.watch(dirs.source + '/assets/js/*.js', gulp.series('copyJS', reloader));
+    gulp.watch(dirs.source + '/uploads/**/*.{gif,png,jpg,jpeg,svg,webp}', gulp.series('imguploads', reloader));
   }),
 );
 

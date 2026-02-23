@@ -1,145 +1,136 @@
-const selects = document.querySelectorAll('select');
-selects.forEach((item) => NiceSelect.bind(item));
-
-const btnBurger = document.querySelector('.hamburger');
-btnBurger.addEventListener('click', () => btnBurger.classList.toggle('is-active'));
-
-const swiper = new Swiper('.swiper', {
-  loop: true,
-  speed: 400,
-  autoplay: true,
-  touchRatio: 1,
-  simulateTouch: true,
-
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-      speed: 400,
-      autoplay: false,
-    },
-
-    768: {
-      slidesPerView: 1,
-      speed: 450,
-      autoplay: false,
-    },
-
-    1024: {
-      slidesPerView: 1,
-      speed: 1200,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-    },
-  },
-});
-
-const header = document.querySelector('header');
-const banner = document.querySelector('.swiper-banner');
-const headerHeight = header.offsetHeight;
-
-banner.setAttribute('style', '--header-height: ' + headerHeight + 'px');
-
-const inputCheckbox = document.querySelectorAll('input[type="checkbox"]');
-
-inputCheckbox.forEach((item) => {
-  item.closest('.input-box').classList.add('input-box_checkbox');
-});
-
-const fileInput = document.querySelectorAll('[type="file"]');
-
-fileInput.forEach((item) => {
-  item.addEventListener('change', function () {
-    let fileName = item.closest('.input-box').querySelector('.file-name');
-    fileName.innerHTML = item.files[0].name;
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('select').forEach((select) => {
+    NiceSelect.bind(select);
   });
-});
 
-const buttons = document.querySelectorAll('button');
+  const btnBurger = document.querySelector('.hamburger');
+  if (btnBurger) {
+    btnBurger.addEventListener('click', () => {
+      btnBurger.classList.toggle('is-active');
+    });
+  }
 
-const advantagesSlideLength = document.querySelectorAll('.advantages .swiper-slide').length;
+  const header = document.querySelector('header');
+  const banner = document.querySelector('.swiper-banner');
 
-const swiperAdvantages = new Swiper('#advantages', {
-  spaceBetween: 12,
-  loop: true,
-  simulateTouch: true,
-  slidesPerView: 1,
-  roundLengths: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-    enabled: true,
-  },
+  if (header && banner) {
+    banner.style.setProperty('--header-height', `${header.offsetHeight}px`);
+  }
 
-  breakpoints: {
-    992: {
-      spaceBetween: 0,
-      slidesPerView: 'auto',
-      slidesPerGroup: advantagesSlideLength,
-      loop: false,
-      simulateTouch: false,
-      pagination: {
-        enabled: false,
-        el: '.swiper-pagination',
-      },
-    },
-  },
-});
+  document.querySelectorAll('input[type="checkbox"]').forEach((input) => {
+    const box = input.closest('.input-box');
+    if (box) box.classList.add('input-box_checkbox');
+  });
 
-document.querySelectorAll('.template-carousel').forEach((carouselEl, index) => {
-  const swiper = new Swiper(carouselEl.querySelector('.swiper'), {
-    slidesPerView: 1,
-    direction: 'horizontal',
+  document.querySelectorAll('[type="file"]').forEach((input) => {
+    input.addEventListener('change', () => {
+      const fileNameEl = input.closest('.input-box')?.querySelector('.file-name');
+      if (fileNameEl && input.files.length) {
+        fileNameEl.textContent = input.files[0].name;
+      }
+    });
+  });
+
+  const bannerSwiper = new Swiper('.swiper-banner', {
     loop: true,
-    spaceBetween: 30,
+    speed: 800,
+    slidesPerView: 1,
+    roundLengths: true,
 
     navigation: {
-      nextEl: carouselEl.querySelector('.swiper-button-next'),
-      prevEl: carouselEl.querySelector('.swiper-button-prev'),
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
 
     pagination: {
-      el: carouselEl.querySelector('.swiper-pagination'),
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+
+  function toggleAutoplay() {
+    if (window.innerWidth >= 992) {
+      bannerSwiper.params.autoplay = {
+        delay: 3000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      };
+      bannerSwiper.autoplay.start();
+    } else {
+      if (bannerSwiper.autoplay.running) {
+        bannerSwiper.autoplay.stop();
+      }
+    }
+  }
+
+  toggleAutoplay();
+
+  window.addEventListener('resize', toggleAutoplay);
+
+  const advantagesSlides = document.querySelectorAll('.advantages .swiper-slide').length;
+
+  new Swiper('#advantages', {
+    spaceBetween: 12,
+    loop: true,
+    slidesPerView: 1,
+    roundLengths: true,
+    simulateTouch: true,
+
+    pagination: {
+      el: '.swiper-pagination',
       clickable: true,
     },
 
     breakpoints: {
-      830: {
-        slidesPerView: 2,
-        spaceBetween: 30,
+      992: {
+        spaceBetween: 0,
+        slidesPerView: 'auto',
+        slidesPerGroup: advantagesSlides,
+        loop: false,
+        simulateTouch: false,
         pagination: {
           enabled: false,
-          el: carouselEl.querySelector('.swiper-pagination'),
-        },
-      },
-      1400: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        pagination: {
-          enabled: false,
-          el: carouselEl.querySelector('.swiper-pagination'),
         },
       },
     },
   });
-});
 
-document.querySelectorAll('.accordion-item').forEach((item) => {
-  item.addEventListener('show.bs.collapse', () => {
-    item.classList.add('active');
+  document.querySelectorAll('.template-carousel').forEach((carousel) => {
+    new Swiper(carousel.querySelector('.swiper'), {
+      slidesPerView: 1,
+      loop: true,
+      spaceBetween: 30,
+      roundLengths: true,
+
+      navigation: {
+        nextEl: carousel.querySelector('.swiper-button-next'),
+        prevEl: carousel.querySelector('.swiper-button-prev'),
+      },
+
+      pagination: {
+        el: carousel.querySelector('.swiper-pagination'),
+        clickable: true,
+      },
+
+      breakpoints: {
+        830: {
+          slidesPerView: 2,
+          pagination: { enabled: false },
+        },
+        1400: {
+          slidesPerView: 3,
+          pagination: { enabled: false },
+        },
+      },
+    });
   });
-  item.addEventListener('hide.bs.collapse', () => {
-    item.classList.remove('active');
+
+  document.querySelectorAll('.accordion-item').forEach((item) => {
+    item.addEventListener('show.bs.collapse', () => {
+      item.classList.add('active');
+    });
+    item.addEventListener('hide.bs.collapse', () => {
+      item.classList.remove('active');
+    });
   });
 });
